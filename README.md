@@ -25,9 +25,9 @@ A MATlab toolkit for LAttice DYnamics calculations based on empirical potentials
 * The "matlady" function calls
   * the "find_neighbor" function to construct one neighbor list for force calculations and one for building up the dynamical matrix;
   * the "find_phi_all" function to calculate all the force constants that are needed;
-    ** the "find_phi_all" function calls the "find_phi_one" function
-      *** the "find_phi_one" function calls the "find_E" function
-        **** the "find_E" function calls the "find_E_tersoff" function
+     * the "find_phi_all" function calls the "find_phi_one" function
+     * the "find_phi_one" function calls the "find_E" function
+     * the "find_E" function calls the "find_E_tersoff" function
   * the "find_nu" function to construct the dynamical matrix and to calculate the phonon spectrum. 
   
 ## Unit system
