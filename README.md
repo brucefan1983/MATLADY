@@ -4,9 +4,9 @@ A MATlab toolkit for LAttice DYnamics calculations based on empirical potentials
 ## Features
 
 * This is a pedagogical code for teaching some basics of lattice dynamics.
-  * Forces constants are calculated by using finite difference from empirical potentials.
-  * The dynamical matrix at a given set of k-points is constructed from the force constants.
-  * From the eigenvalues and eigenvectors of the dynamics matrix, one can calculate many physical quantities. 
+  * Force constants are calculated by using finite difference from empirical potentials.
+  * The dynamical matrices at a given set of k-points are constructed from the force constants.
+  * From the eigenvalues and eigenvectors of the dynamics matrices, one can calculate many physical quantities. 
   * In the very first version, the code can only calculate the phonon dispersion for systems described by the Tersoff potential.
   * I plan to enrich the features little by little.
   
@@ -19,13 +19,13 @@ A MATlab toolkit for LAttice DYnamics calculations based on empirical potentials
 * The testing scripts call
   * the function "find_r" to build up the real space super cell;
   * the function "find_k" to build up the reciprocal space;
-  * the driver funciton "matlady" to do the major calculations;
+  * the driver function "matlady" to do the major calculations;
   * the "plot_dispersion" function to plot the phonon dispersion.
 
 * The "matlady" function calls
   * the "find_neighbor" function to construct one neighbor list for force calculations and one for building up the dynamical matrix;
-  * the "find_phi_all" function to calculate the the force constants that are needed;
-  * the "find_nu" function to construct the dynamical matrix and calculate the phonon spectrum. 
+  * the "find_phi_all" function to calculate all the force constants that are needed;
+  * the "find_nu" function to construct the dynamical matrix and to calculate the phonon spectrum. 
 
 * the "find_phi_all" function calls the "find_phi_one" function
 
