@@ -6,7 +6,7 @@ pot.para=[1.8308e3,471.18,2.4799,1.7322,1.1e-6,0.78734,1.0039e5,...
     16.217,-0.59825,2.7,3];
 
 % r-space data
-a0=5.431; % lattice constant
+a0=5.432; % lattice constant
 axyz=a0*[1,1,1];
 r0=[0.0, 0.0, 0.5, 0.5, 0.25, 0.25, 0.75, 0.75; ...
     0.0, 0.5, 0.0, 0.5, 0.25, 0.75, 0.25, 0.75; ...
@@ -20,8 +20,11 @@ pbc=[1,1,1];
 
 % k-space data
 a=[0 1 1;1 0 1;1 1 0]*a0/2;
-special_k=[0,0,0;1/2,0,1/2;3/8,3/8,3/4;0,0,0;1/2,1/2,1/2];
-name_special_k={'$\Gamma$','X','K','$\Gamma$','L'};
+special_k=[0,0,0;    1/2,0,1/2;    % Gamma -> X
+    1/2,0,1/2;       5/8,1/4,5/8;  % X -> U=K
+    3/8,3/8,3/4;     0,0,0;        % K -> Gamma
+    0,0,0;           1/2,1/2,1/2]; % Gamma -> L
+name_special_k={'$\Gamma$','X','U=K','$\Gamma$','L'};
 Nk=100; % number of k points between two special ones
 [K,k_norm]=find_k(Nk,special_k.',a);
 
